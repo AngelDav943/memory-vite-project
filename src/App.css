@@ -1,7 +1,7 @@
 .cards {
   display: flex;
   flex-wrap: wrap;
-  
+
   justify-content: center;
   align-items: center;
 
@@ -28,9 +28,12 @@
   border-radius: 0.1em;
 }
 
-.card .front { 
+.card .front {
   transform: rotateY(0deg);
-  background-color: powderblue;
+  /*background-color: powderblue;*/
+  background-image: url('./src/assets/base.png');
+  background-size: contain;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;

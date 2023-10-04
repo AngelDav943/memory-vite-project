@@ -37,7 +37,9 @@ function App() {
       card.classList.add("show")
       return
     }
-    
+
+    if (last.card == card) return;
+
     card.classList.add("show")
     if (last.pair == pair) {
       last.card.classList.add("correct")
@@ -46,7 +48,6 @@ function App() {
       last = undefined
     } else {
       setTimeout(() => {
-        console.log("he")
         card.classList.remove("show")
         last.card.classList.remove("show")
         last = undefined
@@ -64,7 +65,7 @@ function App() {
       <div className='cards'>
         {pairs.map((id,index) => (
           <Card key={index} pair={id} onClick={spin}/>
-        ))} 
+        ))}
       </div>
     </>
   )
