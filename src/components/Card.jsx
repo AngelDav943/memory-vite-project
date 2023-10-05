@@ -9,9 +9,10 @@ export default function(props) {
 
     return <div id={current} className="card" onClick={onClick}>
         <div className="face front">
-            <p>{props.pair}</p>
+            <img src={"./src/assets/cards/" + props.pair + ".png"} alt="" />
         </div>
         <div className="face back">
+            {props.pair}
         </div>
     </div>
 }
